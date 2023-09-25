@@ -1,0 +1,127 @@
+package io.swagger.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * UsersRegisterBody
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-09-25T13:16:13.627391754Z[GMT]")
+
+
+public class UsersRegisterBody   {
+  @JsonProperty("email")
+  private String email = null;
+
+  @JsonProperty("password")
+  private String password = null;
+
+  @JsonProperty("password_confirmation")
+  private String passwordConfirmation = null;
+
+  public UsersRegisterBody email(String email) {
+    this.email = email;
+    return this;
+  }
+
+  /**
+   * Get email
+   * @return email
+   **/
+  @Schema(description = "")
+  
+    public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public UsersRegisterBody password(String password) {
+    this.password = password;
+    return this;
+  }
+
+  /**
+   * Get password
+   * @return password
+   **/
+  @Schema(description = "")
+  
+    public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public UsersRegisterBody passwordConfirmation(String passwordConfirmation) {
+    this.passwordConfirmation = passwordConfirmation;
+    return this;
+  }
+
+  /**
+   * Get passwordConfirmation
+   * @return passwordConfirmation
+   **/
+  @Schema(description = "")
+  
+    public String getPasswordConfirmation() {
+    return passwordConfirmation;
+  }
+
+  public void setPasswordConfirmation(String passwordConfirmation) {
+    this.passwordConfirmation = passwordConfirmation;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    UsersRegisterBody usersRegisterBody = (UsersRegisterBody) o;
+    return Objects.equals(this.email, usersRegisterBody.email) &&
+        Objects.equals(this.password, usersRegisterBody.password) &&
+        Objects.equals(this.passwordConfirmation, usersRegisterBody.passwordConfirmation);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(email, password, passwordConfirmation);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class UsersRegisterBody {\n");
+    
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    passwordConfirmation: ").append(toIndentedString(passwordConfirmation)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
